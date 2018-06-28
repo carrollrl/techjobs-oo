@@ -20,6 +20,7 @@ public class SearchController {
 
     private JobData jobData = JobData.getInstance();
 
+    // SearchForm form processed here, passed into view
     @RequestMapping(value = "")
     public String search(Model model) {
         model.addAttribute(new SearchForm());

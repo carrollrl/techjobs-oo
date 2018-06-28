@@ -32,6 +32,7 @@ public class JobData {
         return instance;
     }
 
+    // find a job by its id
     public Job findById(int id) {
         for (Job job : jobs) {
             if (job.getId() == id)
@@ -46,6 +47,7 @@ public class JobData {
     }
 
 
+    // find all jobs matching the given string in the given column/property
     public ArrayList<Job> findByColumnAndValue(JobFieldType column, String value) {
 
         ArrayList<Job> matchingJobs = new ArrayList<>();
@@ -59,6 +61,7 @@ public class JobData {
     }
 
 
+    // find all jobs matching the given string in any fields
     public ArrayList<Job> findByValue(String value) {
 
         ArrayList<Job> matchingJobs = new ArrayList<>();
